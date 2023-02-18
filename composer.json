@@ -1,0 +1,26 @@
+{
+    "name": "hmm/dingerprebuildform",
+    "description": "hmm",
+    "type": "composer-package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hmm\\Dingerprebuildform\\": "packages/hmm/dingerprebuildform/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hmm\\Dingerprebuildform\\DingerServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "thihaeung",
+            "email": "thihaeung@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
