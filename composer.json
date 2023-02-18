@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hmm\\Dingerprebuildform\\": "packages/hmm/dingerprebuildform/src"
+            "Hmm\\Dingerprebuildform\\": "src/"
         }
     },
     "extra": {
