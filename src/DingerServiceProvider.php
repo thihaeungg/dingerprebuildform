@@ -16,7 +16,7 @@ class DingerServiceProvider extends ServiceProvider
     if ($this->app->runningInConsole()) {
 
       $this->publishes([
-        __DIR__.'/../config/config.php' => config_path('dinger.php'),
+        __DIR__.'/config/config.php' => config_path('dinger.php'),
       ], 'config');
   
     }
