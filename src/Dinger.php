@@ -8,7 +8,6 @@ class Dinger
 {
 
     public static function getPublicKey(){
-        return config('dinger.testing') . 'sd';
-        // return "asd";
+        return config('dinger.testing');
     }
 }
