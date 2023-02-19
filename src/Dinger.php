@@ -49,7 +49,7 @@ class Dinger
 
     public static function encryptData($payData){
 
-        $this->checkConfigData();
+        static::checkConfigData();
 
         $payData = json_encode($payData);
 
