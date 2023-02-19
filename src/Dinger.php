@@ -2,6 +2,7 @@
 
 namespace Hmm\Dingerprebuildform;
 
+use ErrorException;
 use phpseclib\Crypt\RSA;
 use Hmm\Dingerprebuildform\Dinger;
 use Hmm\Dingerprebuildform\CustomException;
@@ -42,7 +43,7 @@ class Dinger
         ];
        
         foreach($config_data as $key => $data){
-            $data == null ? throw new CustomException($key . 'cannot be null in config/dinger.php') : '';
+            $data == null ? throw new ErrorException($key . ' cannot be null in config/dinger.php') : '';
         }
     }
 
