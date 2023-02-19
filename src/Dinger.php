@@ -10,6 +10,7 @@ use Illuminate\Validation\ValidationException;
 
 class Dinger
 {  
+    ##############load_prebuildform_url
     public static function load(Array $items, String $customerName,Int $totalAmount, String $merchantOrderId){
 
         static::checkConfigData();
@@ -31,6 +32,7 @@ class Dinger
         return config('dinger.url') . '?hashValue='. $encryptData['encryptedHashValue'] .'&payload=' . $encryptData['urlencode_value'];
     }
 
+    ##############config_validate
     public static function checkConfigData(){
         $config_data = [
             "public_key" => config('dinger.public_key'),
@@ -47,6 +49,7 @@ class Dinger
         }
     }
 
+    ##############request_encryption
     public static function encryptData($payData){
 
         static::checkConfigData();
@@ -75,6 +78,22 @@ class Dinger
             "encryptedHashValue" => $encryptedHashValue,
             "urlencode_value" => $urlencode_value
         ];
+    }
+
+    ##############callback
+    public static function callback(String $paymentResult){
+        $paymentResult = $request->paymentResult;
+        $checkSum = $request->checksum;
+        $callbackKey =  "7f4917e39f698ac433ac1d207e139adc";
+        $decrypted = openssl_decrypt($paymentResult,"AES-256-ECB", $callbackKey);
+ 
+        if(hash("sha256", $decrypted) !== $checkSum){
+            return throw new ErrorException('Payment result is incorrect Singanature.');
+        } elseif (hash("sha256", $decrypted) == $checkSum) {
+            $decryptedValues = json_decode($decrypted, true);
+    
+            return json_decode($decrypted, true);
+        }
     }
     
 }
