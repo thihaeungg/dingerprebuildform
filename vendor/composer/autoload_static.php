@@ -6,14 +6,14 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitd9d5058e44aff0e5e87c7c469b13bbdc
 {
+    public static $files = array (
+        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'p' => 
         array (
-            'phpseclib3\\' => 11,
-        ),
-        'P' => 
-        array (
-            'ParagonIE\\ConstantTime\\' => 23,
+            'phpseclib\\' => 10,
         ),
         'H' => 
         array (
@@ -22,13 +22,9 @@ class ComposerStaticInitd9d5058e44aff0e5e87c7c469b13bbdc
     );
 
     public static $prefixDirsPsr4 = array (
-        'phpseclib3\\' => 
+        'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
-        ),
-        'ParagonIE\\ConstantTime\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
         'Hmm\\Dingerprebuildform\\' => 
         array (

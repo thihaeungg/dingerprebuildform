@@ -53,11 +53,13 @@ class Dinger
 
         $payData = json_encode($payData);
 
+        $publicKey = '-----BEGIN PUBLIC KEY-----'. config('dinger.public_key') .'-----END PUBLIC KEY-----';
+
         $rsa = new RSA();
 
         extract($rsa->createKey(1024));
 
-        $rsa->loadKey(config('dinger.public_key')); // public key
+        $rsa->loadKey($publicKey); // public key
 
         $rsa->setEncryptionMode(2);
 
