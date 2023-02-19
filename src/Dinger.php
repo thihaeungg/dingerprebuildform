@@ -3,7 +3,7 @@
 namespace Hmm\Dingerprebuildform;
 
 use ErrorException;
-use phpseclib\Crypt\RSA;
+use phpseclib3\Crypt\RSA;
 use Hmm\Dingerprebuildform\Dinger;
 use Hmm\Dingerprebuildform\CustomException;
 use Illuminate\Validation\ValidationException;
