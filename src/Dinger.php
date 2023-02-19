@@ -81,10 +81,8 @@ class Dinger
     }
 
     ##############callback
-    public static function callback(String $paymentResult){
-        $paymentResult = $request->paymentResult;
-        $checkSum = $request->checksum;
-        $callbackKey =  "7f4917e39f698ac433ac1d207e139adc";
+    public static function callback(String $paymentResult,String $checkSum){
+        $callbackKey =  "d655c33205363f5450427e6b6193e466";
         $decrypted = openssl_decrypt($paymentResult,"AES-256-ECB", $callbackKey);
  
         if(hash("sha256", $decrypted) !== $checkSum){
