@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Hmm\\Dingerprebuildform\\' => array($baseDir . '/packages/hmm/dingerprebuildform/src'),
+    'phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'ParagonIE\\ConstantTime\\' => array($vendorDir . '/paragonie/constant_time_encoding/src'),
+    'Hmm\\Dingerprebuildform\\' => array($baseDir . '/src'),
 );
