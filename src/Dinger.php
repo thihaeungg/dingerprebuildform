@@ -11,7 +11,7 @@ class Dinger
 {  
     public static function load(Array $items, String $customerName,Int $totalAmount, String $merchantOrderId){
 
-        $this->checkConfigData();
+        static::checkConfigData();
 
         $payData = [
             "clientId" => config('dinger.client_id'),
@@ -25,12 +25,12 @@ class Dinger
             "merchantName" => config('dinger.merchant_name')
         ];
 
-        $encryptData = $this->encryptData($payData);
+        $encryptData = static::encryptData($payData);
 
         return config('dinger.url') . '?hashValue='. $encryptData['encryptedHashValue'] .'&payload=' . $encryptData['urlencode_value'];
     }
 
-    public function checkConfigData(){
+    public static function checkConfigData(){
         $config_data = [
             "public_key" => config('dinger.public_key'),
             "secret_key" => config('dinger.secret_key'),
@@ -46,7 +46,7 @@ class Dinger
         }
     }
 
-    public function encryptData($payData){
+    public static function encryptData($payData){
 
         $this->checkConfigData();
 
