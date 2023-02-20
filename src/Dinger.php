@@ -18,7 +18,7 @@ class Dinger
         $payData = [
             "clientId" => config('dinger.client_id'),
             "publicKey" => config('dinger.public_key'),
-            "items" => json_encode(array($items)),
+            "items" => json_encode($items),
             "customerName" => $customerName,
             "totalAmount" => $totalAmount,
             "merchantOrderId" => $merchantOrderId,
