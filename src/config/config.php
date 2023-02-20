@@ -1,6 +1,9 @@
 <?php
 
 return [
+     #Dinger Callback Key ထည့်ပါ။
+     "callback_key" => null,
+
      #Dinger Public Key ထည့်ပါ။
      "public_key" => null, 
 

@@ -42,6 +42,7 @@ class Dinger
             "merchant_name" => config('dinger.merchant_name'),
             "merchant_key" => config('dinger.merchant_key'),
             "client_id" => config('dinger.client_id'),
+            "callback_key" => config('dinger.callback_key'),
         ];
        
         foreach($config_data as $key => $data){
@@ -82,7 +83,7 @@ class Dinger
 
     ##############callback
     public static function callback(String $paymentResult,String $checkSum){
-        $callbackKey =  "d655c33205363f5450427e6b6193e466";
+        $callbackKey =  config('dinger.callback_key');
         $decrypted = openssl_decrypt($paymentResult,"AES-256-ECB", $callbackKey);
  
         if(hash("sha256", $decrypted) !== $checkSum){
