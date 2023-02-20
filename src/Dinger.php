@@ -56,7 +56,7 @@ class Dinger
 
         $payData = json_encode($payData);
 
-        $publicKey = '-----BEGIN PUBLIC KEY-----'. config('dinger.public_key') .'-----END PUBLIC KEY-----';
+        $publicKey = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCFD4IL1suUt/TsJu6zScnvsEdLPuACgBdjX82QQf8NQlFHu2v/84dztaJEyljv3TGPuEgUftpC9OEOuEG29z7z1uOw7c9T/luRhgRrkH7AwOj4U1+eK3T1R+8LVYATtPCkqAAiomkTU+aC5Y2vfMInZMgjX0DdKMctUur8tQtvkwIDAQAB-----END PUBLIC KEY-----';
 
         $rsa = new RSA();
 
