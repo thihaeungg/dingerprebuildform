@@ -49,8 +49,6 @@ Running Command:
 Config Output
 ----------
 
-* This command will create dinger.php file inside config folder like this, 
-
     <?php
 
         return [
@@ -84,12 +82,13 @@ Config Output
         ];
     ?>
 
+* This command will create dinger.php file inside config folder like this, 
+
 * Important - You need fill the dinger info in this config file for package usage.
 
 
-Package Usage:
---------------------------
- 
+#Package Usage
+
 Generate Prebuild Url:
 ----------------
 
@@ -123,8 +122,7 @@ Extract Callback Data:
 
 
 * ImportantForCallbackApi ( Not belong with this function. Just FYI) 
-
-* That callback data need to call with array square brackets.Not with object arrow.
+#That callback data need to call with array square brackets. Not with object arrow.
 
 Callback Output 
 ------
