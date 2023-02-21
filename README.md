@@ -99,7 +99,7 @@ Generate Prebuild Url:
 
 * Note 
 
-* $items array must be include name, amount, quantity.
+* items array must be include name, amount, quantity.
 * customerName must be string.
 * totalAmount must be integer.
 * merchantOrderId must be string.
