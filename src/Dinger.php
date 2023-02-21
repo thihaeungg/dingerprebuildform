@@ -15,6 +15,8 @@ class Dinger
 
         static::checkConfigData();
 
+        static::itemValidate($items);
+
         $payData = [
             "clientId" => config('dinger.client_id'),
             "publicKey" => config('dinger.public_key'),
@@ -94,5 +96,41 @@ class Dinger
             return json_decode($decrypted, true);
         }
     }
+
+    ##############itemValidate
+    public static function itemValidate($items){
+        if (count($items) == count($items, COUNT_RECURSIVE)) 
+        {
+            return throw new ErrorException('items array must be multidimensional array.');
+        }
+        else
+        {
+            foreach($items as $item){
+                if(!array_key_exists('name', $item)){
+                    return throw new ErrorException('Name must be include in items array.');
+                }
     
+                if(!array_key_exists('amount', $item)){
+                    return throw new ErrorException('Amount must be include in items array.');
+                }
+    
+                if(!array_key_exists('quantity', $item)){
+                    return throw new ErrorException('Quantity must be include in items array.');
+                }
+            }
+        }
+        // foreach($items as $item){
+        //     if(!array_key_exists('name', $item)){
+        //         return throw new ErrorException('Name must be include in items array.');
+        //     }
+
+        //     if(!array_key_exists('amount', $item)){
+        //         return throw new ErrorException('Amount must be include in items array.');
+        //     }
+
+        //     if(!array_key_exists('quantity', $item)){
+        //         return throw new ErrorException('Quantity must be include in items array.');
+        //     }
+        // }
+    }
 }
