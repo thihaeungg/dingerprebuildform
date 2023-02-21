@@ -14,18 +14,18 @@ return [
      #Dinger Prebuild url ထည့်ပါ။
      #production url ကို ဤနေရာတွင် ပြောင်းလဲ ဖြည့်စွက်နိုင်သည်။ 
      #sample - https://form.dinger.asia
-     "url" => "https://prebuilt.dinger.asia",
+     "url" => null,
 
      #project name ထည့်ပါ။
      "project_name" => null,
 
-     //merchant name ထည့်ပါ။
+     #merchant name ထည့်ပါ။
      "merchant_name" =>  null,
 
-     //client id ထည့်ပါ။
+     #client id ထည့်ပါ။
      "client_id" =>  null,
 
-     //merchant key ထည့်ပါ။
+     #merchant key ထည့်ပါ။
      "merchant_key" => null
 ];
 
