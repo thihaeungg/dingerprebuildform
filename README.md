@@ -45,10 +45,11 @@ Running Command:
 
     php artisan vendor:publish --provider="Hmm\Dingerprebuildform\DingerServiceProvider" --tag="config"
 
-    #Note
 
-    This command will create dinger.php file inside config folder like this, 
+Config Output
+----------
 
+* This command will create dinger.php file inside config folder like this, 
 
     <?php
 
@@ -83,8 +84,7 @@ Running Command:
         ];
     ?>
 
-    #Important - You need fill the dinger info in this config file for package usage.
-
+* Important - You need fill the dinger info in this config file for package usage.
 
 
 Package Usage:
@@ -97,16 +97,17 @@ Generate Prebuild Url:
 
     Dinger::load(@multidimensionalArray $items,@String $customerName, @Int $totalAmount, @String $merchantOrderId);
 
-    #Note 
+* Note 
 
-    #$items array must be include name, amount, quantity.
-    #customerName must be string.
-    #totalAmount must be integer.
-    #merchantOrderId must be string.
+* $items array must be include name, amount, quantity.
+* customerName must be string.
+* totalAmount must be integer.
+* merchantOrderId must be string.
 
-    #Output 
+Load Output 
+---------
 
-    #This will generate a dinger prebuild form url.    
+* This will generate a dinger prebuild form url.    
 
 Extract Callback Data:
 ----------------
@@ -115,19 +116,20 @@ Extract Callback Data:
 
     Dinger::callback(@String $paymentResult,@String $checkSum);
 
-    #Note 
+* Note 
 
-    #paymentResult must be string.
-    #checkSum must be string.
+* paymentResult must be string.
+* checkSum must be string.
 
 
-    #ImportantForCallbackApi ( Not belong with this function. Just FYI) 
+* ImportantForCallbackApi ( Not belong with this function. Just FYI) 
 
-    #That callback data need to call with array square brackets.Not with object arrow.
+* That callback data need to call with array square brackets.Not with object arrow.
 
-    #Output 
+Callback Output 
+------
 
-    This will generate callback data array.    
+* This will generate decrypted callback data array.    
 
 <!-- Changelog
 ========= -->
