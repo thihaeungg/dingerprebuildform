@@ -1,7 +1,7 @@
-Composer Package Template
+Dinger Prebuild Form Integration Package
 ============
 
-[![Latest Stable Version](https://packagist.org/packages/hmm/dingerprebuildform)]
+<!-- [![Latest Stable Version](https://packagist.org/packages/hmm/dingerprebuildform)] -->
 
 Requirements
 ------------
