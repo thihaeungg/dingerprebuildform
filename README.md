@@ -7,13 +7,13 @@ Requirements
 ------------
 
 * PHP >= 8.0;
-* composer.
+* composer;
 
 Features
 --------
 
-* PSR-4 autoloading compliant structure;
-* Easy to use with Laravel framework;
+* PSR-4 autoloading compliant structure.
+* Easy to use with Laravel framework.
 * Useful tools for better code included.
 
 Installation
@@ -122,7 +122,7 @@ Extract Callback Data:
 * checkSum must be string.
 
 
-* ImportantForCallbackApi ( Not belong with this function. Just FYI) 
+* ImportantForCallbackApi ( Not belong with this function. Just FYI).
 #That callback data need to call with array square brackets. Not with object arrow.
 
 Callback Output 
